@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        SuperHeroi h = new SuperHeroi();
+        /*SuperHeroi h = new SuperHeroi();
         h.nome = "Lisiane Reips";
         h.sexo = 1;
         h.altura = 1.75;
@@ -13,5 +13,9 @@ public class Main {
         h.altura = -300;
         h.nome = "";
         h.mostrar();
+
+         */
+
+        Personagem p = new Personagem();
     }
 }
