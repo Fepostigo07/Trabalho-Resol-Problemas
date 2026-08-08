@@ -1,29 +1,54 @@
+import java.util.ArrayList;
+import java.util.List;
+
 // NÃO ALTERE ANTES DE LER OS PASSOS
-public class SuperHeroi {
-    private String nome;
-    private double altura;
+public class SuperHeroi extends Personagem{
+    private String nomeDeGuerra;
     private boolean identidadeSecreta;
-    private Sexo sexo;
+    public List<String> habilidades;
+
+    public SuperHeroi(String nome, double altura, Sexo sexo, String nomeDeGuerra, boolean identidadeSecreta,  List<String> habilidades) {
+       super(nome, sexo, altura);
+        if (nomeDeGuerra == null || nomeDeGuerra.trim().isEmpty()) {
+            throw new IllegalArgumentException("O nome de guerra não pode ser vazio.");
+        }
+       this.nomeDeGuerra = nomeDeGuerra;
+       this.identidadeSecreta = identidadeSecreta;
+       this.habilidades = new ArrayList<>(habilidades);
+    }
+
+    public String getIdentidadeSecreta() {
+        if (this.identidadeSecreta) {
+            return "A identidade está protegida";
+        }
+        return getNome();
+    }
+
+    public String revelarIdentidade() {
+        return getNome();
+    }
+
+    public String getNomeDeGuerra() {
+        return nomeDeGuerra;
+    }
+
+    public boolean isIdentidadeSecreta() {
+        return identidadeSecreta;
+    }
+
     public List<String> getHabilidades() {
         return new ArrayList<>(this.habilidades);
     }
 
-    public String getIdentidade() {
+    @Override
+    public String apresentar() {
         if (this.identidadeSecreta) {
-            return "??? (identidade protegida)";
-        } else {
-            return this.nome; 
+            return "Eu sou o "  + this.nomeDeGuerra;
+        }
+        else  {
+            return "Eu sou o "  + getNome() + " também conhecido como " + this.nomeDeGuerra;
         }
     }
 
-    public String revelarIdentidade() {
-        return this.nome;
-    }
 
-    public void mostrar() {
-        System.out.println(nome + " - " + sexo + " - " + altura);
-        for (int i = 0; i < habilidades.length; i++) {
-            System.out.println(habilidades[i]);
-        }
-    }
 }

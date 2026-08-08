@@ -16,7 +16,6 @@ Arquiteto/Piloto: Felipe
 
 Arquiteto/Revisor: Lucas
 
-MISSAO 3:
 
 Arquiteto/Piloto: Lucas
 
