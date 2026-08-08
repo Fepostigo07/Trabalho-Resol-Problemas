@@ -30,4 +30,11 @@
      }
 
      public abstract String apresentar();
+
+     public abstract void agir();
+
+     @Override
+     public String toString() {
+         return "Personagem [Nome: " + getNome() + ", Sexo: " + getSexo() + "]";
+     }
 }

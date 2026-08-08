@@ -17,4 +17,9 @@ public class Vilao extends Personagem {
     public String apresentar() {
             return "Eu sou o "  + getNome() + " e o meu nivel de ameaça é " + nivelDeAmeaca;
         }
+
+    @Override
+    public void agir() {
+        System.out.println("Atacando a cidade com nível de ameaça " + getNivelDeAmeaca());
+    }
 }
