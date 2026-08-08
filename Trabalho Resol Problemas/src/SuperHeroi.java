@@ -50,5 +50,24 @@ public class SuperHeroi extends Personagem{
         }
     }
 
+    @Override
+    public void agir() {
+        usarHabilidade();
+    }
 
+    public void usarHabilidade() {
+        if (!getHabilidades().isEmpty()) {
+            System.out.println(getNomeDeGuerra() + " usou: " + getHabilidades().get(0));
+        } else {
+            System.out.println(getNomeDeGuerra() + " não tem habilidades cadastradas!");
+        }
+    }
+
+    public void usarHabilidade(String nome) {
+        if (getHabilidades().contains(nome)) {
+            System.out.println(getNomeDeGuerra() + " conjurou: " + nome);
+        } else {
+            System.out.println(getNomeDeGuerra() + " tentou usar " + nome + ", mas não possui esse poder.");
+        }
+    }
 }
