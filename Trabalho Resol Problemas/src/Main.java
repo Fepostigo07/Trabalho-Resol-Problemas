@@ -1,19 +1,31 @@
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<Personagem> cidade = new ArrayList<>();
-        cidade.add(new SuperHeroi("Gustavo", 2.0, Sexo.HOMEM, "Capitão Zimbabwe", true, Arrays.asList("Sopro Congelante", "Visão Raio-X", "Super Força")));
+        Batalha batalhaFinal = new Batalha();
 
-        cidade.add(new Vilao(1, "Antonio", 0.6, Sexo.OUTRO));
+        SuperHeroi heroi1 = new SuperHeroi("Gustavo", 2.0, Sexo.HOMEM, "Capitão Zimbabwe", true, Arrays.asList("Sopro Congelante", "Visão Raio-X", "Super Força"));
+        SuperHeroi heroi2 = new SuperHeroi("Lisiane", 1.75, Sexo.MULHER, "Super Lisi", true, Arrays.asList("voar"));
+        SuperHeroi heroi3 = new SuperHeroi("Carlos", 1.85, Sexo.HOMEM, "Homem-Trovão", true, Arrays.asList("raios"));
+        Vilao vilao1 = new Vilao(1, "Antonio", 0.6, Sexo.OUTRO);
+        Vilao vilao2 = new Vilao(5, "Mbappe", 1.90, Sexo.OUTRO);
+        Vilao vilao3 = new Vilao(7, "Tienshihan",1.65, Sexo.HOMEM);
 
-        for (Personagem p : cidade) {
-            System.out.println(p.toString());
-            System.out.println(p.apresentar());
-            p.agir();
-        }
-        // Vilao nao é subclasse de superherói porque assim como o herói ele é um personagem que herda os mesmos atributos
+
+        batalhaFinal.adicionar(heroi1);
+        batalhaFinal.adicionar(heroi2);
+        batalhaFinal.adicionar(heroi3);
+        batalhaFinal.adicionar(vilao1);
+        batalhaFinal.adicionar(vilao2);
+        batalhaFinal.adicionar(vilao3);
+
+
+        batalhaFinal.iniciar();
+
+        System.out.println("\nHeróis na batalha: " + batalhaFinal.listarHeroi().size());
+
+        System.out.println("O mais alto é: " + batalhaFinal.maisAlto().getNome());
+
+        batalhaFinal.removerDerrotado("Antonio");
     }
 }
