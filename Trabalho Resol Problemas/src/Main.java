@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        /*SuperHeroi h = new SuperHeroi();
-        h.nome = "Lisiane Reips";
+        SuperHeroi h = new SuperHeroi();
+        h.nome = "";
         h.sexo = 1;
-        h.altura = 1.75;
+        h.altura = 4;
         h.identidadeSecreta = true;
         h.habilidades = new String[]{"super força", "visão de raio-x", "voar",
                 "super velocidade", "sopro congelante"};

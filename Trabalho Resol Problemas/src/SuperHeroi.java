@@ -1,9 +1,24 @@
 // NÃO ALTERE ANTES DE LER OS PASSOS
 public class SuperHeroi {
-    public String nome;
-    public double altura;
-    public boolean identidadeSecreta;
-    public String[] habilidades;
+    private String nome;
+    private double altura;
+    private boolean identidadeSecreta;
+    private Sexo sexo;
+    public List<String> getHabilidades() {
+        return new ArrayList<>(this.habilidades);
+    }
+
+    public String getIdentidade() {
+        if (this.identidadeSecreta) {
+            return "??? (identidade protegida)";
+        } else {
+            return this.nome; 
+        }
+    }
+
+    public String revelarIdentidade() {
+        return this.nome;
+    }
 
     public void mostrar() {
         System.out.println(nome + " - " + sexo + " - " + altura);
