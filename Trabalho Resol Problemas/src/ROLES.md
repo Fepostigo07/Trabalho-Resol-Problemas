@@ -4,5 +4,17 @@ Arquiteto/Piloto: Felipe
 
 Arquiteto/Revisor: Lucas
 
+MISSAO 1:
+
+Arquiteto/Piloto: Lucas
+
+Arquiteto/Revisor: Felipe
+
+MISSAO 2:
+
+Arquiteto/Piloto: Felipe
+
+Arquiteto/Revisor: Lucas
+
 
 
