@@ -13,9 +13,21 @@
         }
 
         this.nome = nome;
-        this.sexo = sexo;
+        this.Sexo = sexo;
         this.altura = altura;
     }
 
-    public abstract String apresentar();
+     public String getNome() {
+         return nome;
+     }
+
+     public Sexo getSexo() {
+         return Sexo;
+     }
+
+     public double getAltura() {
+         return altura;
+     }
+
+     public abstract String apresentar();
 }
