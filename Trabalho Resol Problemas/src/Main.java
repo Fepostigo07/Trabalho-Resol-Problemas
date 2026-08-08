@@ -13,5 +13,9 @@ public class Main {
         h.altura = -300;
         h.nome = "";
         h.mostrar();
+
+         */
+
+        Personagem p = new Personagem();
     }
 }

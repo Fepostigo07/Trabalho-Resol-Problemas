@@ -17,4 +17,6 @@ Arquiteto/Piloto: Felipe
 Arquiteto/Revisor: Lucas
 
 
+Arquiteto/Piloto: Lucas
 
+Arquiteto/Revisor: Felipe
